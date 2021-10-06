@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>News</title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs')  %> 
+    <h1>Hi News</h1>
+    <main class="news">
+       <% newsJson.forEach(elt =>{ %>
+        <div>
+            <h4><%- elt.title %></h4>
+            <h6><%- elt.publishedAt %></h6>
+            <div>
+                <img src="<%- elt.urlToImage %>" alt="">
+            </div>
+            <p><%- elt.content %></p>
+            <p><%- elt.description %></p>
+            <div class="news-footer">
+                <h4><%- elt.author %></h4>
+                <a href="<%- elt.url %>">Click4More</a>
+            </div>
+        </div>
+
+      <% }) %>
+    </main>
+
+</body>
+</html>

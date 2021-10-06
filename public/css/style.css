@@ -1,0 +1,26 @@
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.gall {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.gall img {
+  width: 22vw;
+}
+.news {
+  width: 98vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2vw;
+  row-gap: 2vw;
+}
+.news img {
+  width: 30vw;
+}
+.news-footer {
+  display: flex;
+  justify-content: space-between;
+}
